@@ -42,7 +42,7 @@ Build an interactive Power BI dashboard to help Adventure Works analyze revenue,
 ## 🖼️ Dashboard Preview
 Add your screenshots inside the `/screenshots` folder and they will display here:
 
-![Executive Summary](screenshots/Executives.png)
+![Executive Summary](screenshots/report-overview.png)
 
 ---
 
@@ -87,7 +87,7 @@ Data prep done in **Power Query**:
 ---
 
 ## 📐 Data Model
-![Model](screenshots/Model.png)
+![Model](screenshots/datamodel.png)
 
 - Star schema core; snowflake used for product lookups  
 - One-to-many relationships; single-direction cross-filtering  
@@ -158,3 +158,4 @@ I’d love to connect and collaborate!
 ## 📝 Author
 **Devesh G**  
 _Data Analyst | Power BI Developer_
+
