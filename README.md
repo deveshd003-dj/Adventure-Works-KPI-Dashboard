@@ -42,7 +42,7 @@ Build an interactive Power BI dashboard to help Adventure Works analyze revenue,
 ## 🖼️ Dashboard Preview
 Add your screenshots inside the `/screenshots` folder and they will display here:
 
-![Executive Summary](screenshots/report-overview.png)
+![Executive Summary](screenshots/Executives.png)
 
 ---
 
@@ -80,13 +80,14 @@ Source: **Maven Analytics (Udemy)** CSVs.
 Data prep done in **Power Query**:
 - Header promotion, data typing, null handling  
 - Calculated columns, trimming & standardization  
-- Folder import for multi-file append, remove duplicates  
+- Folder import for multi-file append  
+- Remove duplicates  
 - Data profiling & QA
 
 ---
 
 ## 📐 Data Model
-![Model](screenshots/datamodel.png)
+![Model](screenshots/Model.png)
 
 - Star schema core; snowflake used for product lookups  
 - One-to-many relationships; single-direction cross-filtering  
@@ -105,57 +106,55 @@ Adventure-Works-KPI-Dashboard/
 │   └── banner.png
 ├── data/
 └── README.md
+```
 
-🧮 Key DAX Measures (Examples)
+---
 
+## 🧮 Key DAX Measures (Examples)
+```dax
 Total Revenue = SUM('Sales'[Revenue])
 Total Profit = SUM('Sales'[Profit])
 YTD Revenue = TOTALYTD([Total Revenue], 'Date'[Date])
 Return Rate = DIVIDE([Total Returns], [Total Orders], 0)
 Avg Revenue Per Customer = DIVIDE([Total Revenue], DISTINCTCOUNT('Customer'[CustomerID]), 0)
+```
 
-📦 Installation
+---
 
+## 📦 Installation
 You will need:
 
-Power BI Desktop (latest version)
+- **Power BI Desktop (latest version)**
 
-▶️ How to Use
+---
 
-Download the .pbix file from /pbix
+## ▶️ How to Use
+1. Download the `.pbix` file from `/pbix`  
+2. Open in **Power BI Desktop**  
+3. Refresh visuals or connect new data  
+4. Navigate using slicers, filters & drillthrough
 
-Open in Power BI Desktop
+---
 
-Refresh visuals or connect new data
+## ✨ Features
+- 📊 KPI Cards & Trend Analysis  
+- 🌍 Interactive Map Visuals  
+- 🔁 Drillthrough Reports  
+- 🎚️ What-if Pricing Parameter  
+- 📈 Monthly & YoY performance  
+- 🗃️ Clean Star Schema Model  
+- ⚙️ Advanced DAX calculations
 
-Navigate report pages using slicers, filters & drillthrough
+---
 
-✨ Features
-
-📊 KPI Cards & Trend Analysis
-
-🌍 Interactive Map Visuals
-
-🔁 Drillthrough Reports
-
-🎚️ What-if Pricing Parameter
-
-📈 Monthly & YoY performance
-
-🗃️ Clean Star Schema Model
-
-⚙️ Advanced DAX calculations
-
-🤝 Connect With Me
-
+## 🤝 Connect With Me
 I’d love to connect and collaborate!
 
-🔗 LinkedIn: https://www.linkedin.com/in/devesh-g-40430a253/
+- 🔗 LinkedIn: https://www.linkedin.com/in/devesh-g-40430a253/  
+- 🐙 GitHub: https://github.com/deveshd003-dj
 
-🐙 GitHub: https://github.com/deveshd003-dj
+---
 
-📝 Author
-
-Devesh G
-Data Analyst | Power BI Developer
-
+## 📝 Author
+**Devesh G**  
+_Data Analyst | Power BI Developer_
