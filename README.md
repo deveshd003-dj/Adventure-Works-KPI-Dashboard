@@ -8,177 +8,154 @@
 
 <p align="center">
   <a href="https://github.com/deveshd003-dj/Adventure-Works-KPI-Dashboard">
-    <img src="https://img.shields.io/badge/View_on-GitHub-black?style=for-the-badge&logo=github" />
+    <img src="https://img.shields.io/badge/View_on-GitHub-black?style=for-the-badge&logo=github" alt="GitHub" />
   </a>
   <a href="https://www.linkedin.com/in/devesh-g-40430a253/">
-    <img src="https://img.shields.io/badge/Connect_on-LinkedIn-blue?style=for-the-badge&logo=linkedin" />
+    <img src="https://img.shields.io/badge/Connect_on-LinkedIn-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn" />
   </a>
 </p>
 
 ---
 
-## 🎯 **Project Goal**
-Build an interactive Power BI dashboard to help **Adventure Works** analyze:
-
-- Revenue, profit, orders, and returns  
-- Product performance and trends  
-- Regional contributions  
-- Customer insights & high-value segments  
-- Monthly & year-over-year performance  
-
-The dashboard covers **2020 to 2022** and supports **management decision-making** with powerful KPIs.
+## Table of Contents
+- [Project Goal](#project-goal)  
+- [Dashboard Preview](#dashboard-preview)  
+- [Business Questions to Answer](#business-questions-to-answer)  
+- [Key Insights](#key-insights)  
+- [Dataset & ETL](#dataset--etl)  
+- [Data Model](#data-model)  
+- [Project Structure](#project-structure)  
+- [Key DAX Measures](#key-dax-measures)  
+- [Installation](#installation)  
+- [How to Use](#how-to-use)  
+- [Features](#features)  
+- [Connect With Me](#connect-with-me)  
+- [Author](#author)
 
 ---
 
-## 🖼️ **Dashboard Preview**
+## 🎯 Project Goal
+Build an interactive Power BI dashboard to help Adventure Works analyze revenue, profit, orders, and returns; evaluate product and regional performance; and identify high-value customers — for **2020–2022**.
 
-> Add your screenshots inside `/screenshots`
+---
+
+## 🖼️ Dashboard Preview
+Add your screenshots inside the `/screenshots` folder and they will display here:
 
 ![Executive Summary](screenshots/report-overview.png)
 
 ---
 
-## 🧠 **Business Questions to Answer**
-This dashboard answers important strategic questions:
+## 🧠 Business Questions to Answer
+**Executive / High Level**
+- What are total Revenue, Profit, Orders and Return Rate (2020–2022)?  
+- Which product categories drive most revenue and profit?  
+- Which regions (countries/continents) are the top performers?
 
-### 🔹 Executive KPIs  
-1. What is the total Revenue, Profit, Orders, and Return Rate (2020–2022)?  
-2. Which product category contributes the most profit?  
-3. Which regions perform the best?
+**Product**
+- Which products and subcategories miss monthly KPI targets?  
+- How would a price change impact product profitability (what-if)?
 
-### 🔹 Product Insights  
-1. Which product categories generate the most revenue?  
-2. Which products miss their monthly KPI targets?  
-3. What is the monthly revenue trend across categories?  
-4. How does price change impact profit?
+**Customer**
+- Who are the top high-value customers and segments by revenue?  
+- Is average revenue per customer increasing or decreasing over time?
 
-### 🔹 Customer Insights  
-1. Who are the top high-value customers?  
-2. What customer segments (income & occupation) buy the most?  
-3. Is average revenue per customer increasing or decreasing?  
-
-### 🔹 Geographic Insights  
-1. Which countries and continents generate most orders?  
-2. Are there emerging high-growth regions?  
+**Geography**
+- Which countries and continents contribute the most orders?  
+- Are there new regions showing growth potential?
 
 ---
 
-## 📊 **Key Insights**
-
-### ⭐ Executive Summary  
-- Revenue: **$24.9M**  
-- Profit: **$10.5M**  
-- Orders: **25,200**  
-- Return Rate: **2.17%**  
-- **Bikes** category generated **$23.6M** revenue (top performer)
-
-### ⭐ Monthly Performance  
-- Bikes: **+3.75%** monthly revenue increase  
-- Clothing: **11% revenue jump** in current month  
-- Accessories: underperformed KPI targets  
-
-### ⭐ Revenue Trend (2020–2022)  
-- 2020 drop due to **COVID-19**  
-- Strong recovery in 2021  
-- Slight decline in 2022 → requires strategic intervention  
-
-### ⭐ Customer Insights  
-- Customer Base: **17,000**  
-- Avg revenue per customer: **$1,431**  
-- Top Customer: **Maurice Shan ($12,285)**  
-
-### ⭐ Geographic Insights  
-- USA leads with **8,700 orders**  
-- Australia next: **6,060**  
-- UK leads in Europe: **2,771**  
+## 📊 Key Insights (summary)
+- **Total revenue** (2020–2022): **$24.9M**  
+- **Total profit**: **$10.5M**  
+- **Orders**: **25,200** — **Return rate**: **2.17%**  
+- **Top category:** Bikes (majority of revenue)  
+- 2020 decline due to **COVID-19**; recovery in 2021; slight dip in 2022 — strategy needed to reaccelerate.
 
 ---
 
-## 🧺 **Dataset Overview**
-Dataset sourced from **Maven Analytics (Udemy)** as raw CSV files.
-
-### 🛠 Cleaning (Power Query)
-- Header promotion  
-- Data type formatting  
-- Missing value handling  
-- Calculated columns  
-- Column merging & splitting  
-- Folder import for fact tables  
-- Row trimming & standardization  
-- Removal of duplicates & unnecessary columns  
-- Full dataset profiling  
+## 🧺 Dataset & ETL
+Source: **Maven Analytics (Udemy)** CSVs.  
+Data prep done in **Power Query**:
+- Header promotion, data typing, null handling  
+- Calculated columns, trimming & standardization  
+- Folder import for multi-file append, remove duplicates  
+- Data profiling & QA
 
 ---
 
-## 📐 **Data Model**
+## 📐 Data Model
 ![Model](screenshots/datamodel.png)
 
-Key points:
-- Star Schema for most tables  
-- Snowflake for product category lookups  
-- One-to-many relationships  
-- Single-direction cross-filter  
-- Hidden foreign keys for clarity  
+- Star schema core; snowflake used for product lookups  
+- One-to-many relationships; single-direction cross-filtering  
+- Foreign keys hidden for clarity
 
 ---
 
-## 📁 **Project Structure**
-
+## 📁 Project Structure
+```text
 Adventure-Works-KPI-Dashboard/
 ├── pbix/
-│ └── AdventureWorks_KPI.pbix
+│   └── AdventureWorks_KPI.pbix
 ├── screenshots/
-│ ├── Executives.png
-│ ├── Model.png
-│ └── (...your other images)
+│   ├── Executives.png
+│   ├── Model.png
+│   └── banner.png
 ├── data/
-│ └── (optional sample data)
 └── README.md
 
+🧮 Key DAX Measures (Examples)
 
----
-
-## 🧮 **Key DAX Measures (Examples)**
-
-```DAX
 Total Revenue = SUM('Sales'[Revenue])
-
 Total Profit = SUM('Sales'[Profit])
-
 YTD Revenue = TOTALYTD([Total Revenue], 'Date'[Date])
-
 Return Rate = DIVIDE([Total Returns], [Total Orders], 0)
+Avg Revenue Per Customer = DIVIDE([Total Revenue], DISTINCTCOUNT('Customer'[CustomerID]), 0)
 
-Avg Revenue Per Customer = 
-    DIVIDE([Total Revenue], DISTINCTCOUNT('Customer'[CustomerID]), 0)
+📦 Installation
 
-## 📦 Installation
 You will need:
 
-- Power BI Desktop (latest version)
+Power BI Desktop (latest version)
 
-## ▶️ How to Use
-- Download the `.pbix` file from `/pbix`
-- Open in Power BI Desktop
-- Refresh visuals or connect new data
-- Navigate using slicers, filters, drillthrough
+▶️ How to Use
 
-## ✨ Features
-- 📊 KPI Cards & Trend Analysis
-- 🌍 Interactive Map Visuals
-- 🔁 Drillthrough Reports
-- 🎚️ What-If Pricing Parameter
-- 📈 Monthly & YoY performance
-- 🗃️ Clean Star Schema Model
-- ⚙️ Advanced DAX calculations
+Download the .pbix file from /pbix
 
-## 🤝 Connect With Me
-I’d love to connect, collaborate, and discuss analytics!
+Open in Power BI Desktop
 
-🔗 **LinkedIn:** https://www.linkedin.com/in/devesh-g-40430a253/  
-🐙 **GitHub:** https://github.com/deveshd003-dj  
+Refresh visuals or connect new data
 
-## 📝 Author
-**Devesh G**  
-_Data Analyst | Power BI Developer_
+Navigate report pages using slicers, filters & drillthrough
+
+✨ Features
+
+📊 KPI Cards & Trend Analysis
+
+🌍 Interactive Map Visuals
+
+🔁 Drillthrough Reports
+
+🎚️ What-if Pricing Parameter
+
+📈 Monthly & YoY performance
+
+🗃️ Clean Star Schema Model
+
+⚙️ Advanced DAX calculations
+
+🤝 Connect With Me
+
+I’d love to connect and collaborate!
+
+🔗 LinkedIn: https://www.linkedin.com/in/devesh-g-40430a253/
+
+🐙 GitHub: https://github.com/deveshd003-dj
+
+📝 Author
+
+Devesh G
+Data Analyst | Power BI Developer
 
