@@ -40,7 +40,6 @@ Build an interactive Power BI dashboard to help Adventure Works analyze revenue,
 ---
 
 ## 🖼️ Dashboard Preview
-Add your screenshots inside the `/screenshots` folder and they will display here:
 
 ![Executive Summary](screenshots/report-overview.png)
 
@@ -158,4 +157,5 @@ I’d love to connect and collaborate!
 ## 📝 Author
 **Devesh G**  
 _Data Analyst | Power BI Developer_
+
 
